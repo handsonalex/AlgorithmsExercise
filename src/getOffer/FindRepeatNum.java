@@ -13,11 +13,13 @@ public class FindRepeatNum {
 //  做的时候想多了,只要求随便找到一个重复的数即可,自己的解法是按找到所有重复数来写的
 
     public int mySolution(int[] nums) {
+        //创建一个数组,数组内容存的就是这个数字出现了几次
         int[] count  = new int[nums.length];
         int result = 0;
         for (int num : nums) {
             count[num]++;
         }
+        //找到数组中出现1次以上的数
         for (int i = 0; i < count.length; i++) {
             if (count[i] > 1){
                 result = i;
