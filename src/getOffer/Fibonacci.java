@@ -3,12 +3,14 @@ package getOffer;
 //写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)
 
 public class Fibonacci {
+
     public int mySolution(int n) {
         if (n < 1){
             return  0;
         }else if (n == 1){
             return 1;
         }
+        //用数组的好处是能储存之前计算的结果,只取一次值其实可以不用数组
         int[] dic = new int[n+1];
         int a = 0;
         int b = 1;
